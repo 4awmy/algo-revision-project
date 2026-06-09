@@ -535,7 +535,10 @@ function buildOE() {{
   OE.forEach(q=>{{
     const c=document.createElement('div');
     c.className='oe-card';
+    const imgs = (IMGS['oe_'+q.num]||[]).map(src=>
+      `<img class="qimg" src="${{src}}" alt="OE Q${{q.num}} figure" loading="lazy"/>`).join('');
     c.innerHTML=`<div class="qh"><span class="qbadge">Q${{q.num}}</span><div class="oe-q">${{esc(q.text)}}</div></div>
+    ${{imgs}}
     <textarea class="oe-ta" rows="3" placeholder="Write your answer…"></textarea>`;
     L.appendChild(c);
   }});
