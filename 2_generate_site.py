@@ -24,7 +24,7 @@ HTML = f"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Algorithms Revision — Dr. Mahmoud Wahdan</title>
+<title>Comprehensive Algorithms Revision — Dr. Mahmoud Wahdan</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 :root{{
@@ -37,7 +37,9 @@ body{{background:var(--bg);color:var(--tx);font-family:'Segoe UI',system-ui,sans
 
 /* ── NAV ── */
 .nav{{background:var(--sf);border-bottom:1px solid var(--br);display:flex;align-items:center;gap:4px;padding:0 16px;position:sticky;top:0;z-index:200;flex-wrap:wrap}}
-.nav h1{{font-size:.95rem;font-weight:700;color:var(--ac2);padding:12px 12px 12px 0;border-right:1px solid var(--br);margin-right:4px;white-space:nowrap}}
+.nav-branding{{padding:12px 12px 12px 0;border-right:1px solid var(--br);margin-right:4px}}
+.nav h1{{font-size:.95rem;font-weight:700;color:var(--ac2);white-space:nowrap}}
+.nav p{{font-size:.65rem;color:var(--mu);margin-top:1px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px}}
 .tab{{padding:12px 14px;border-bottom:3px solid transparent;cursor:pointer;font-size:.85rem;font-weight:500;color:var(--mu);background:none;border-top:none;border-left:none;border-right:none;transition:all .2s;white-space:nowrap}}
 .tab.on{{color:var(--ac2);border-bottom-color:var(--ac2)}}
 .tab:hover{{color:var(--tx)}}
@@ -140,7 +142,10 @@ code{{background:var(--sf2);padding:1px 5px;border-radius:4px;font-family:monosp
 <body>
 
 <div class="nav">
-  <h1>⚡ Algorithms Revision</h1>
+  <div class="nav-branding">
+    <h1>⚡ Algorithms Revision</h1>
+    <p>Dr. Mahmoud Wahdan</p>
+  </div>
   <button class="tab on" onclick="go('mcq')">📝 MCQ ({total_mcq})</button>
   <button class="tab" onclick="go('oe')">✍️ Open-Ended ({total_oe})</button>
   <button class="tab" onclick="go('cheat')">📋 Cheat Sheet</button>
