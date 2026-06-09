@@ -1,0 +1,4 @@
+check_bad_qs.py
+debug_page.py
+__pycache__/
+*.json
